@@ -1,0 +1,108 @@
+.form {
+    width: 500px;
+    min-height: 400px;
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 20px; 
+    text-align: center; 
+    background-color: inherit;
+    /* transition: 0.1s linear; */
+}
+ 
+
+.form-heading {
+    letter-spacing: 7px;
+    /* font-weight: bold; */
+    font-size: 1.7rem;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transition: 0.2s linear;
+}
+
+#light .form-heading {
+    color: #000;
+    transition: 0.2s linear;
+}
+
+#dark .form-heading {
+    color: #fff;
+    transition: 0.2s linear;
+}
+
+.input-group { 
+    width: 100%;
+    text-align: justify;
+    margin-top: 10px;
+    transition: 0.2s linear;
+}
+
+.input-group .input {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    display: block;
+    outline: none; 
+    transition: 0.2s linear;
+} 
+
+#light .input-group .input {
+    background-color: rgb(224, 224, 224);
+    border: 2px solid rgb(224, 224, 224);
+    color: #000;
+    transition: 0.2s linear;
+}
+
+#dark .input-group .input {
+    background-color: rgb(31, 31, 31);
+    border: 2px solid rgb(31, 31, 31);
+    color: #fff;
+    transition: 0.2s linear;
+}  
+
+.input-group .input:focus {
+    border: 2px solid #000 !important;
+    transition: 0.2s linear;
+}
+
+.input-group .error-message {
+    font-style: italic;
+    display: block;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: #e74c3c;
+    user-select: none;
+    transition: 0.2s linear;
+}
+
+.forgot-link {
+    text-decoration: underline;
+    font-style: normal;
+    user-select: none;
+    color: rgb(114, 114, 114);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.button-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.2s linear;
+    text-align: center;
+}
+
+.button-group .button {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #4158D0; 
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+    color: #fff;
+    transition: 0.2s linear;
+} 
+ 

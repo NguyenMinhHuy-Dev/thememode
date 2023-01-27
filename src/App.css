@@ -1,5 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #fff;
+  --text: #000;
+}
+
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in;
+}
+
+#light {
+  background-color: #f5f6fa;
+}
+
+#dark {
+  background-color: #262626;
 }
 
 .App-logo {

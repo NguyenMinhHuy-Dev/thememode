@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { Login } from './components/Login';
+import { createContext, useState } from 'react';
+import { Header } from './components/Header';
+
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") === null ? 'light' : localStorage.getItem("theme"));
+
+  const toggleTheme = () => {
+    localStorage.setItem("theme", theme === 'light' ? 'dark' : 'light');
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light')); 
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <ThemeContext.Provider value={{theme, toggleTheme}}>
+      <div className="App" id={theme}>
+        <Header toggleTheme={toggleTheme}/>
+        <Login />
+      </div>
+    // </ThemeContext.Provider>
   );
 }
 
